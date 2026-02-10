@@ -196,20 +196,20 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 .car-stage{width:400px;height:350px;}.vehicle-info-name{font-size:32px;}.vehicle-info-sub{font-size:18px;}.stats-bar-inner{flex-direction:column;gap:16px;align-items:stretch;}.stats-grid{flex-wrap:wrap;gap:16px;}.thumb-strip{left:8px;}.thumb-card,.thumb-add{width:90px;height:62px;}.thumb-name{font-size:11px;}.stats-right{justify-content:center;}}
 @media(max-width:768px){
 .mobile-toggle{display:block;}.sidebar{transform:translateX(-100%);}.sidebar.open{transform:translateX(0);}.sidebar-overlay.open{display:block;}.main{margin-left:0;}.content-area{padding:60px 16px 80px;}.form-row,.form-row-3{grid-template-columns:1fr;}.spec-grid{grid-template-columns:1fr;}.nav-hints{display:none;}
-/* Garage screen mobile — no scroll, everything in viewport */
+/* Garage screen mobile — no scroll */
 .garage-screen{overflow:hidden;}
-.hud-top{padding:8px 16px;}
-.hud-top-left h2{font-size:14px;letter-spacing:2px;}
+.hud-top{padding:10px 16px;}
+.hud-top-left h2{font-size:15px;letter-spacing:2px;}
 .hud-top-left .hud-sub{font-size:7px;}
 .hud-garage-count{font-size:20px;}
 .hud-garage-label{font-size:7px;}
-/* Vehicle info — tight below HUD */
-.vehicle-info-overlay{top:36px;width:90%;left:50%;}
-.vehicle-info-badge{font-size:7px;letter-spacing:2px;margin-bottom:1px;}
-.vehicle-info-name{font-size:20px;letter-spacing:1px;}
-.vehicle-info-sub{font-size:11px;letter-spacing:2px;margin-top:0;}
-/* Thumb strip — right below vehicle info */
-.thumb-strip{position:absolute;left:0;right:0;top:82px;transform:none;flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none;padding:0 16px;gap:5px;z-index:20;-webkit-overflow-scrolling:touch;}
+/* Vehicle info — below HUD with breathing room */
+.vehicle-info-overlay{top:46px;width:85%;left:50%;}
+.vehicle-info-badge{font-size:7px;letter-spacing:2px;margin-bottom:2px;}
+.vehicle-info-name{font-size:18px;letter-spacing:1px;}
+.vehicle-info-sub{font-size:10px;letter-spacing:2px;margin-top:1px;}
+/* Thumb strip — below vehicle info */
+.thumb-strip{position:absolute;left:0;right:0;top:100px;transform:none;flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none;padding:0 16px;gap:5px;z-index:20;-webkit-overflow-scrolling:touch;}
 .thumb-card,.thumb-add{width:64px;height:40px;min-width:64px;border-radius:4px;}
 .thumb-year{font-size:6px;}
 .thumb-name{font-size:8px;}
@@ -217,9 +217,9 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 .thumb-add{width:40px;min-width:40px;height:40px;}
 .thumb-add-icon{font-size:14px;}
 .thumb-add-text{font-size:5px;}
-/* Car stage — fills middle area */
-.car-stage{position:absolute;top:125px;left:50%;transform:translateX(-50%);width:100vw;height:calc(100vh - 290px);}
-/* Stats bar — tight at bottom */
+/* Car stage — moderate size in middle */
+.car-stage{position:absolute;top:145px;left:50%;transform:translateX(-50%);width:100vw;height:calc(100vh - 330px);}
+/* Stats bar — at bottom */
 .stats-bar{padding:6px 16px 8px;position:absolute;bottom:0;left:0;right:0;}
 .stats-bar-inner{flex-direction:column;gap:6px;align-items:stretch;}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;}
@@ -248,13 +248,13 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 .schedule-table th,.schedule-table td{padding:8px 10px;}
 }
 @media(max-width:400px){
-.vehicle-info-overlay{top:32px;}
-.vehicle-info-name{font-size:18px;}
-.vehicle-info-sub{font-size:10px;}
-.thumb-strip{top:74px;padding:0 10px;}
+.vehicle-info-overlay{top:42px;}
+.vehicle-info-name{font-size:16px;}
+.vehicle-info-sub{font-size:9px;}
+.thumb-strip{top:90px;padding:0 10px;}
 .thumb-card,.thumb-add{width:56px;height:36px;min-width:56px;}
 .thumb-name{font-size:7px;}
-.car-stage{top:112px;height:calc(100vh - 260px);}
+.car-stage{top:130px;height:calc(100vh - 310px);}
 .stats-grid{grid-template-columns:1fr 1fr;}
 .stat-col-value{font-size:14px;}
 .action-btn{padding:7px 6px;font-size:10px;}
