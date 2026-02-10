@@ -38,7 +38,7 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 .vehicle-info-sub{font-family:var(--font-heading);font-size:26px;font-weight:300;letter-spacing:4px;text-transform:uppercase;color:rgba(232,228,221,0.6);margin-top:2px;}
 
 /* CAR STAGE */
-.car-stage{position:absolute;top:48%;left:50%;transform:translate(-50%,-35%);z-index:10;width:850px;height:600px;display:flex;align-items:center;justify-content:center;}
+.car-stage{position:absolute;top:48%;left:50%;transform:translate(-50%,-35%);z-index:10;width:850px;height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 
 /* THUMB STRIP */
 .thumb-strip{position:absolute;left:24px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:8px;max-height:70vh;overflow-y:auto;padding:8px 0;}
@@ -622,7 +622,8 @@ function autoScaleAndCenter(obj){
   var size=new THREE.Vector3();box.getSize(size);
   var center=new THREE.Vector3();box.getCenter(center);
   var maxDim=Math.max(size.x,size.y,size.z);
-  var scale=5.5/maxDim;
+  var targetSize=window.innerWidth<=768?3.5:5.5;
+  var scale=targetSize/maxDim;
   obj.scale.multiplyScalar(scale);
   box.setFromObject(obj);box.getCenter(center);
   obj.position.sub(center);
@@ -752,6 +753,7 @@ function buildProceduralCar(color){
     var arch=new THREE.Mesh(new THREE.BoxGeometry(0.08,0.15,0.8),bodyMat);arch.position.set(wp.x>0?1.04:-1.04,0.55,wp.z);carGroup.add(arch);
   });
 
+  if(window.innerWidth<=768)carGroup.scale.set(0.65,0.65,0.65);
   carGroup.position.y=0.02;scene.add(carGroup);
 }
 
