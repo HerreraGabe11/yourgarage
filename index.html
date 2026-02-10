@@ -195,38 +195,40 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 @media(max-width:900px){
 .car-stage{width:400px;height:350px;}.vehicle-info-name{font-size:32px;}.vehicle-info-sub{font-size:18px;}.stats-bar-inner{flex-direction:column;gap:16px;align-items:stretch;}.stats-grid{flex-wrap:wrap;gap:16px;}.thumb-strip{left:8px;}.thumb-card,.thumb-add{width:90px;height:62px;}.thumb-name{font-size:11px;}.stats-right{justify-content:center;}}
 @media(max-width:768px){
-.mobile-toggle{display:block;}.sidebar{transform:translateX(-100%);}.sidebar.open{transform:translateX(0);}.sidebar-overlay.open{display:block;}.main{margin-left:0;}.content-area{padding:60px 16px 80px;}.form-row,.form-row-3{grid-template-columns:1fr;}.spec-grid{grid-template-columns:1fr;}.hud-top{padding:10px 16px;}.nav-hints{display:none;}
-/* Garage screen mobile */
-.garage-screen{overflow-y:auto;}
-.hud-top-left h2{font-size:16px;letter-spacing:2px;}
-.hud-top-left .hud-sub{font-size:8px;}
-.hud-garage-count{font-size:24px;}
-/* Vehicle info — pushed below HUD */
-.vehicle-info-overlay{top:44px;width:90%;left:50%;}
-.vehicle-info-badge{font-size:8px;letter-spacing:2px;}
-.vehicle-info-name{font-size:22px;letter-spacing:1px;}
-.vehicle-info-sub{font-size:13px;letter-spacing:2px;}
-/* Thumb strip — horizontal below vehicle info */
-.thumb-strip{position:absolute;left:0;right:0;top:100px;transform:none;flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none;padding:0 16px;gap:6px;z-index:20;-webkit-overflow-scrolling:touch;}
-.thumb-card,.thumb-add{width:72px;height:48px;min-width:72px;border-radius:5px;}
-.thumb-year{font-size:7px;}
-.thumb-name{font-size:9px;}
-.thumb-model{font-size:6px;}
-.thumb-add{width:48px;min-width:48px;height:48px;}
-.thumb-add-icon{font-size:16px;}
-.thumb-add-text{font-size:6px;}
-/* Car stage mobile — compact, centered between thumb strip and stats */
-.car-stage{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);width:100vw;height:160px;}
-/* Stats bar mobile */
-.stats-bar{padding:8px 16px 10px;}
-.stats-bar-inner{flex-direction:column;gap:10px;align-items:stretch;}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.mobile-toggle{display:block;}.sidebar{transform:translateX(-100%);}.sidebar.open{transform:translateX(0);}.sidebar-overlay.open{display:block;}.main{margin-left:0;}.content-area{padding:60px 16px 80px;}.form-row,.form-row-3{grid-template-columns:1fr;}.spec-grid{grid-template-columns:1fr;}.nav-hints{display:none;}
+/* Garage screen mobile — no scroll, everything in viewport */
+.garage-screen{overflow:hidden;}
+.hud-top{padding:8px 16px;}
+.hud-top-left h2{font-size:14px;letter-spacing:2px;}
+.hud-top-left .hud-sub{font-size:7px;}
+.hud-garage-count{font-size:20px;}
+.hud-garage-label{font-size:7px;}
+/* Vehicle info — tight below HUD */
+.vehicle-info-overlay{top:36px;width:90%;left:50%;}
+.vehicle-info-badge{font-size:7px;letter-spacing:2px;margin-bottom:1px;}
+.vehicle-info-name{font-size:20px;letter-spacing:1px;}
+.vehicle-info-sub{font-size:11px;letter-spacing:2px;margin-top:0;}
+/* Thumb strip — right below vehicle info */
+.thumb-strip{position:absolute;left:0;right:0;top:82px;transform:none;flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none;padding:0 16px;gap:5px;z-index:20;-webkit-overflow-scrolling:touch;}
+.thumb-card,.thumb-add{width:64px;height:40px;min-width:64px;border-radius:4px;}
+.thumb-year{font-size:6px;}
+.thumb-name{font-size:8px;}
+.thumb-model{font-size:5px;}
+.thumb-add{width:40px;min-width:40px;height:40px;}
+.thumb-add-icon{font-size:14px;}
+.thumb-add-text{font-size:5px;}
+/* Car stage — fills middle area */
+.car-stage{position:absolute;top:125px;left:50%;transform:translateX(-50%);width:100vw;height:calc(100vh - 290px);}
+/* Stats bar — tight at bottom */
+.stats-bar{padding:6px 16px 8px;position:absolute;bottom:0;left:0;right:0;}
+.stats-bar-inner{flex-direction:column;gap:6px;align-items:stretch;}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;}
 .stat-col{min-width:auto;}
-.stat-col-value{font-size:20px;}
-.stat-col-label{font-size:7px;}
-.stat-bar{margin-top:3px;}
-.stats-right{display:flex;gap:8px;justify-content:stretch;}
-.action-btn{padding:9px 12px;font-size:12px;letter-spacing:1px;flex:1;text-align:center;}
+.stat-col-value{font-size:16px;}
+.stat-col-label{font-size:6px;letter-spacing:1px;}
+.stat-bar{margin-top:2px;height:2px;}
+.stats-right{display:flex;gap:6px;justify-content:stretch;}
+.action-btn{padding:8px 8px;font-size:11px;letter-spacing:1px;flex:1;text-align:center;}
 /* Modal mobile */
 .modal{width:100%;max-width:100vw;border-radius:10px 10px 0 0;max-height:85vh;}
 .modal-body{padding:16px;}
@@ -246,18 +248,17 @@ a{color:var(--amber);text-decoration:none;}a:hover{text-decoration:underline;}
 .schedule-table th,.schedule-table td{padding:8px 10px;}
 }
 @media(max-width:400px){
-.car-stage{height:140px;}
-.vehicle-info-overlay{top:40px;}
-.vehicle-info-name{font-size:19px;}
-.vehicle-info-sub{font-size:11px;}
-.thumb-strip{top:88px;padding:0 10px;}
-.thumb-card,.thumb-add{width:64px;height:42px;min-width:64px;}
-.thumb-name{font-size:8px;}
+.vehicle-info-overlay{top:32px;}
+.vehicle-info-name{font-size:18px;}
+.vehicle-info-sub{font-size:10px;}
+.thumb-strip{top:74px;padding:0 10px;}
+.thumb-card,.thumb-add{width:56px;height:36px;min-width:56px;}
+.thumb-name{font-size:7px;}
+.car-stage{top:112px;height:calc(100vh - 260px);}
 .stats-grid{grid-template-columns:1fr 1fr;}
-.stat-col-value{font-size:16px;}
-.action-btn{padding:8px 10px;font-size:11px;}
-.stats-right{flex-wrap:wrap;}
-.hud-top-left h2{font-size:14px;}
+.stat-col-value{font-size:14px;}
+.action-btn{padding:7px 6px;font-size:10px;}
+.hud-top-left h2{font-size:13px;}
 .content-area{padding:60px 12px 80px;}
 }
 </style>
@@ -600,8 +601,7 @@ function init3D(){
   var stage=document.getElementById('carStage');
   scene=new THREE.Scene();
   camera=new THREE.PerspectiveCamera(40,stage.clientWidth/stage.clientHeight,0.1,1000);
-  var isMobile=window.innerWidth<=768;
-  camera.position.set(0,isMobile?1.4:1.8,isMobile?5.5:7);camera.lookAt(0,isMobile?0.2:0.3,0);
+  camera.position.set(0,1.8,7);camera.lookAt(0,0.3,0);
   renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
   renderer.setSize(stage.clientWidth,stage.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
@@ -614,7 +614,7 @@ function init3D(){
   var dl2=new THREE.DirectionalLight(0x8090b0,0.6);dl2.position.set(-5,3,-3);scene.add(dl2);
   var dl3=new THREE.DirectionalLight(0xffffff,0.5);dl3.position.set(0,2,-5);scene.add(dl3);
   buildCar(currentCarColor);animate3D();
-  window.addEventListener('resize',function(){var m=window.innerWidth<=768;camera.position.set(0,m?1.4:1.8,m?5.5:7);camera.lookAt(0,m?0.2:0.3,0);camera.aspect=stage.clientWidth/stage.clientHeight;camera.updateProjectionMatrix();renderer.setSize(stage.clientWidth,stage.clientHeight);});
+  window.addEventListener('resize',function(){camera.aspect=stage.clientWidth/stage.clientHeight;camera.updateProjectionMatrix();renderer.setSize(stage.clientWidth,stage.clientHeight);});
 }
 
 function autoScaleAndCenter(obj){
